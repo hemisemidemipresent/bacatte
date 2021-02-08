@@ -1,0 +1,18 @@
+#snowflakeContainer {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: none;
+}
+
+body {
+    background-color: black;
+}
+
+.snowflake {
+    position: fixed;
+    user-select: none;
+    z-index: 1000;
+    pointer-events: none;
+    
+}

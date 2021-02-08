@@ -20,7 +20,8 @@ body{
     background-color: rgba(0,0,0,0.5);
     padding: 20px;
     border-radius: 1rem;
-    height: 90vh;
+    height: 90vh;    height: 100vh;
+
 }
 
 button{
@@ -30,4 +31,15 @@ button{
     background-color: #333333;
     color:white;
     font-family: Montserrat, sans-serif;
-}
+}body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: rgba(33,33,33,0.5);        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #a87a23;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+  }

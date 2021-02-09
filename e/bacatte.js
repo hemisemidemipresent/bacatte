@@ -49,7 +49,7 @@ function Snowflake(element, speed, xPos, yPos, angleSpeed) {
     this.yPos = yPos;
     this.scale = 1;
     this.angle = Math.random() * 360;
-    this.angleSpeed = 1;
+    this.angleSpeed = angleSpeed;
     // declare variables used for snowflake's motion
     this.counter = 0;
     this.sign = Math.random() < 0.5 ? 1 : -1;
@@ -65,7 +65,7 @@ Snowflake.prototype.update = function () {
     // using some trigonometry to determine our x and y position
     this.counter += this.speed / 5000;
     this.yPos += this.speed / 30;
-    this.scale = 0.5;
+    this.scale = 0.25;
     this.angle += this.angleSpeed;
     this.angle = this.angle % 360;
     // setting our snowflake's position
@@ -79,7 +79,6 @@ Snowflake.prototype.update = function () {
 
     // if snowflake goes below the browser window, move it back to the top
     if (this.yPos > browserHeight) {
-        console.log(browserWidth, browserHeight);
         let xpos = getPosition(330, browserWidth);
         this.xPos = xpos;
         this.yPos = -1000;
@@ -113,13 +112,19 @@ function generateSnowflakes() {
         // clone our original snowflake and add it to snowflakeContainer
         var snowflakeClone = originalSnowflake.cloneNode(true);
         let src = generateImgSrc();
+
         snowflakeClone.setAttribute('src', src);
         snowflakeContainer.appendChild(snowflakeClone);
 
         // set our snowflake's initial position and related properties
         var initialXPos = getPosition(50, browserWidth);
         var initialYPos = getPosition(50, browserHeight);
-        var angleSpeed = Math.random() * 0.5;
+        if (src.includes('bacatte')) {
+            var angleSpeed = 0;
+            console.log(angleSpeed);
+        } else {
+            var angleSpeed = Math.random();
+        }
         var speed = 100 + Math.random() * 250;
 
         // create our Snowflake object
@@ -183,6 +188,6 @@ function setResetFlag(e) {
 }
 
 function generateImgSrc() {
-    let arr = ['./head.png', './tail.png', './body.png'];
-    return arr[Math.floor(Math.random() * 3)];
+    let arr = ['../bacatte.png', '../octopus0.png', '../octopus1.png'];
+    return arr[Math.floor(Math.random() * arr.length)];
 }

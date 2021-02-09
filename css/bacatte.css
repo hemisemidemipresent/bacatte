@@ -19,4 +19,9 @@ body {
 }
 body{
     color: white;
+    font-family: Montserrat, sans-serif;
+}
+a{
+    text-decoration: none;
+    color:whitesmoke
 }

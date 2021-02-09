@@ -43,3 +43,9 @@ button{
     background-color: #a87a23;    /* color of the scroll thumb */
     border-radius: 20px;       /* roundness of the scroll thumb */
   }
+  a{
+   
+    color:rgb(255, 246, 192);
+font-family: Consolas, monospace;
+font-size: 1.25rem;
+}

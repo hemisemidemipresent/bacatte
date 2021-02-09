@@ -22,6 +22,8 @@ body{
     font-family: Montserrat, sans-serif;
 }
 a{
-    text-decoration: none;
-    color:whitesmoke
+   
+    color:rgb(255, 246, 192);
+font-family: Consolas, monospace;
+font-size: 1.25rem;
 }

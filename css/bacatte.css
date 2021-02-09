@@ -15,4 +15,8 @@ body {
     z-index: 1000;
     pointer-events: none;
     
+
+}
+body{
+    color: white;
 }

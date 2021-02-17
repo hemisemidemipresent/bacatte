@@ -188,6 +188,11 @@ function setResetFlag(e) {
 }
 
 function generateImgSrc() {
-    let arr = ['./img/bacatte.png', './img/octopus0.png', './img/octopus1.png'];
+    let arr = [
+        './img/bacatte.png',
+        './img/bacatte.png',
+        './img/octopus0.png',
+        './img/octopus1.png',
+    ];
     return arr[Math.floor(Math.random() * arr.length)];
 }
